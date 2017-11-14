@@ -392,7 +392,7 @@ i, cite, em, var, address, dfn {
 	color: $white !important;
 }
 .section-heading{
-	font-size: 20px;
+	font-size: 30px;
 	line-height: 1.2em;
 	color: $color_1;
 	margin-bottom: 40px;
@@ -400,6 +400,8 @@ i, cite, em, var, address, dfn {
 	padding-bottom: 5px; 
 	position: relative;
 	text-align: center;
+	font-family: $font_2;
+	font-weight: normal;
 	span{
 		color: $color_2;
 	}
@@ -540,7 +542,7 @@ strong, b{
     line-height: 1.6;
 }
 ol, ul {
-	list-style: initial;
+	/*list-style: initial;*/
     margin-left: 24px;	
 
     li{
@@ -702,9 +704,8 @@ ul.circle{
 }
 
 .banner-page{
-	/*height: 150px;*/
 	display: block;
-	background: $font__body-color url('../images/banner-page.jpg') center center no-repeat;
+	background: $font__body-color url('../images/banner-page-2.jpg') center center no-repeat;
 	-webkit-background-size: cover; 
 	-moz-background-size: cover; 
 	-o-background-size: cover; 
@@ -717,13 +718,12 @@ ul.circle{
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: $color_1;
-		@include opacity(.1);
+		background-color: rgba($color_2, .1);
 	}
 	.title-page{
 		text-align: left;
-		@extend h2;
-		color: $font__body-color;
+		@extend h3;
+		color: darken($font__body-color, 20%);
 		margin-bottom: 0;
 	}
 	.breadcrumb-container{
@@ -737,12 +737,15 @@ ul.circle{
 	    font-size: 13px;
 	    font-weight: 400;
     	> .active,
-    	> li + li:before,
+    	/*> li + li:before,*/
 	    a{
-	    	color: rgba($font__body-color, .6);
+	    	color: darken($font__body-color, 10%);
 	    	&:hover{
-	    		color: $color_2;
+	    		color: rgba($white, 1);
 	    	}
+	    }
+	    > li + li:before{
+	    	color: darken($font__body-color, 10%);
 	    }
 	}
 }
@@ -776,7 +779,7 @@ ul.circle{
 		margin: 0;
 		font-weight: 700;
 		a{
-			color: $black_3;
+			color: $font__body-color;
 			display: block;
 			padding: 15px 20px;
 			margin-bottom: 5px;
@@ -787,7 +790,9 @@ ul.circle{
 			}
 		}
 		&.active a{
-			border-color: $color_1;
+			border-color: $color_2;
+			background-color: $color_1;
+			color: $white;
 		}
 	}
 }
@@ -961,4 +966,24 @@ Back To Top Section
 }
 .border-right{
 	border-right: 1px solid #ccc;
+}
+
+
+.panel{
+	> .panel-heading{
+	    color: $white;
+	    background-color: $color_2;
+	    border-color: #ddd;
+	    a{
+	    	display: block;
+	    }
+	}
+	.panel-body{
+		.subtitle{
+			padding: 8px 15px;
+			margin: -15px -15px 0 -15px;
+			background-color: $color_1;
+			color: $white;
+		}
+	}
 }

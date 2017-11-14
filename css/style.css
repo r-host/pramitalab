@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Open+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Leckerli+One|Roboto:400,700");
 .bolder {
   font-weight: 600; }
 
@@ -200,18 +200,16 @@ input,
 select,
 textarea {
   color: #555555;
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.7; }
 
 h1, .panel-pricing .price,
 h2,
-.banner-page .title-page,
 h3,
 .jumbo-heading h2,
-.jumbo-heading .banner-page .title-page,
-.banner-page .jumbo-heading .title-page,
+.banner-page .title-page,
 h4,
 .lead,
 .team-2 .title,
@@ -420,21 +418,21 @@ td {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
   color: #686868;
-  font-family: "Merriweather", serif; }
+  font-family: "Roboto", sans-serif; }
 
 :-moz-placeholder {
   color: #686868;
-  font-family: "Merriweather", serif; }
+  font-family: "Roboto", sans-serif; }
 
 ::-moz-placeholder {
   color: #686868;
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
   opacity: 1;
   /* Since FF19 lowers the opacity of the placeholder by default */ }
 
 :-ms-input-placeholder {
   color: #686868;
-  font-family: "Merriweather", serif; }
+  font-family: "Roboto", sans-serif; }
 
 html, body {
   width: 100%;
@@ -528,14 +526,16 @@ i, cite, em, var, address, dfn {
   color: #ffffff !important; }
 
 .section-heading, .section-heading-events {
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1.2em;
   color: #FF0000;
   margin-bottom: 40px;
   padding-top: 20px;
   padding-bottom: 5px;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  font-family: "Leckerli One", cursive;
+  font-weight: normal; }
   .section-heading span, .section-heading-events span {
     color: #252525; }
   .section-heading.light, .light.section-heading-events {
@@ -611,17 +611,15 @@ p {
 
 h1, .panel-pricing .price,
 h2,
-.banner-page .title-page,
 h3,
 .jumbo-heading h2,
-.jumbo-heading .banner-page .title-page,
-.banner-page .jumbo-heading .title-page,
+.banner-page .title-page,
 h4,
 .lead,
 .team-2 .title,
 h5,
 .section-subheading {
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 20px; }
@@ -630,11 +628,11 @@ h1, .panel-pricing .price {
   font-size: 3.571em;
   line-height: normal; }
 
-h2, .banner-page .title-page {
+h2 {
   font-size: 2.857em;
   line-height: normal; }
 
-h3, .jumbo-heading h2, .jumbo-heading .banner-page .title-page, .banner-page .jumbo-heading .title-page {
+h3, .jumbo-heading h2, .banner-page .title-page {
   font-size: 1.714em;
   line-height: normal; }
 
@@ -653,12 +651,12 @@ strong, b {
   font-weight: 700; }
 
 .lead {
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.6; }
 
 ol, ul {
-  list-style: initial;
+  /*list-style: initial;*/
   margin-left: 24px; }
   ol li, ul li {
     margin: 8px 0; }
@@ -679,7 +677,7 @@ blockquote {
   color: #252525;
   font-size: 20px;
   position: relative; }
-  .jumbo-heading h2, .jumbo-heading .banner-page .title-page, .banner-page .jumbo-heading .title-page {
+  .jumbo-heading h2 {
     position: relative;
     z-index: 2; }
   .jumbo-heading .fa {
@@ -814,9 +812,8 @@ ul.circle {
     clear: both; }
 
 .banner-page {
-  /*height: 150px;*/
   display: block;
-  background: #555555 url("../images/banner-page.jpg") center center no-repeat;
+  background: #555555 url("../images/banner-page-2.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -829,13 +826,10 @@ ul.circle {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #FF0000;
-    opacity: 0.1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
-    filter: alpha(opacity=10); }
+    background-color: rgba(37, 37, 37, 0.1); }
   .banner-page .title-page {
     text-align: left;
-    color: #555555;
+    color: #222222;
     margin-bottom: 0; }
   .banner-page .breadcrumb {
     padding: 0;
@@ -845,13 +839,13 @@ ul.circle {
     font-size: 13px;
     font-weight: 400; }
     .banner-page .breadcrumb > .active,
-    .banner-page .breadcrumb > li + li:before,
     .banner-page .breadcrumb a {
-      color: rgba(85, 85, 85, 0.6); }
+      color: #3c3c3c; }
       .banner-page .breadcrumb > .active:hover,
-      .banner-page .breadcrumb > li + li:before:hover,
       .banner-page .breadcrumb a:hover {
-        color: #252525; }
+        color: white; }
+    .banner-page .breadcrumb > li + li:before {
+      color: #3c3c3c; }
 
 /* 2.5. CATEGORY MENU */
 .widget {
@@ -880,7 +874,7 @@ ul.circle {
     margin: 0;
     font-weight: 700; }
     .category-nav li a {
-      color: #222222;
+      color: #555555;
       display: block;
       padding: 15px 20px;
       margin-bottom: 5px;
@@ -889,7 +883,9 @@ ul.circle {
       .category-nav li a:hover {
         border-color: #FF0000; }
     .category-nav li.active a {
-      border-color: #FF0000; }
+      border-color: #252525;
+      background-color: #FF0000;
+      color: #ffffff; }
 
 .info-detail dl {
   font-size: 16px; }
@@ -1042,6 +1038,18 @@ Back To Top Section
 
 .border-right {
   border-right: 1px solid #ccc; }
+
+.panel > .panel-heading {
+  color: #ffffff;
+  background-color: #252525;
+  border-color: #ddd; }
+  .panel > .panel-heading a {
+    display: block; }
+.panel .panel-body .subtitle {
+  padding: 8px 15px;
+  margin: -15px -15px 0 -15px;
+  background-color: #FF0000;
+  color: #ffffff; }
 
 /**
  * 3. - COMPONENTS
@@ -1582,7 +1590,6 @@ Back To Top Section
     display: inline-block; }
   .feature-box-9 .meta-date {
     font-size: 12px;
-    font-family: "Open Sans", sans-serif;
     margin-bottom: 10px; }
   .feature-box-9:hover .media {
     background-color: #252525; }
@@ -1619,7 +1626,7 @@ Back To Top Section
   letter-spacing: -.5px;
   font-weight: 700;
   font-size: 48px;
-  font-family: "Merriweather", serif; }
+  font-family: "Roboto", sans-serif; }
 .counter-1 .counter-title {
   display: table-cell;
   vertical-align: middle;
@@ -1798,7 +1805,7 @@ Back To Top Section
   letter-spacing: -.04em;
   margin-top: -15px;
   line-height: normal;
-  font-family: "Merriweather", serif; }
+  font-family: "Roboto", sans-serif; }
 .history-2 .timeline__item .aksen {
   position: relative;
   display: table-cell;
@@ -2205,7 +2212,7 @@ Back To Top Section
       font-size: 14px;
       margin-left: 0px;
       display: block; }
-  .panel-pricing h3, .panel-pricing .jumbo-heading h2, .jumbo-heading .panel-pricing h2, .panel-pricing .jumbo-heading .banner-page .title-page, .jumbo-heading .banner-page .panel-pricing .title-page, .panel-pricing .banner-page .jumbo-heading .title-page, .banner-page .jumbo-heading .panel-pricing .title-page {
+  .panel-pricing h3, .panel-pricing .jumbo-heading h2, .jumbo-heading .panel-pricing h2, .panel-pricing .banner-page .title-page, .banner-page .panel-pricing .title-page {
     font-size: 20px;
     line-height: 34px;
     font-weight: 700;
@@ -2221,7 +2228,7 @@ Back To Top Section
     border-radius: 0; }
   .panel-pricing.best > .panel-heading {
     background-color: #FF0000; }
-    .panel-pricing.best > .panel-heading h3, .panel-pricing.best > .panel-heading .jumbo-heading h2, .jumbo-heading .panel-pricing.best > .panel-heading h2, .panel-pricing.best > .panel-heading .jumbo-heading .banner-page .title-page, .jumbo-heading .banner-page .panel-pricing.best > .panel-heading .title-page, .panel-pricing.best > .panel-heading .banner-page .jumbo-heading .title-page, .banner-page .jumbo-heading .panel-pricing.best > .panel-heading .title-page {
+    .panel-pricing.best > .panel-heading h3, .panel-pricing.best > .panel-heading .jumbo-heading h2, .jumbo-heading .panel-pricing.best > .panel-heading h2, .panel-pricing.best > .panel-heading .banner-page .title-page, .banner-page .panel-pricing.best > .panel-heading .title-page {
       color: #252525; }
   .panel-pricing .table > tbody > tr > td, .panel-pricing .table > tfoot > tr > td {
     padding: 12px 0;
@@ -2882,7 +2889,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     border-right: 1px solid #ccc;
     /*border-top: 1px solid #ccc;*/
     border-bottom: 1px solid #ccc;
-    font-size: 13px; }
+    /*font-size: 13px;*/ }
     .navbar-main .nav > li > a.home {
       font-size: 20px;
       padding-left: 20px;
@@ -2991,8 +2998,8 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
   .navbar-nav > li > a {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 13px;
+    padding-right: 13px; }
 
   .logo-stiky img {
     display: none; } }
@@ -3178,7 +3185,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     display: inline-table; }
   .wrap-caption .btn, .wrap-caption .btn-primary, .wrap-caption .btn-secondary, .wrap-caption .btn-ghost-light, .wrap-caption .btn-ghost-dark {
     margin-right: 15px; }
-  .wrap-caption h2, .wrap-caption .banner-page .title-page, .banner-page .wrap-caption .title-page {
+  .wrap-caption h2 {
     color: #ffffff; }
 
 /**
@@ -3656,7 +3663,7 @@ dl.hiw {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Leckerli One", cursive; }
 
 .cta-1 .body-text {
   max-width: 70%;
@@ -3981,14 +3988,13 @@ dl.hiw {
   .footer .footer-item .logo-bottom {
     margin-bottom: 10px; }
   .footer .footer-item .footer-title {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 400;
     padding: 20px 0 20px 0;
     margin-bottom: 30px;
     position: relative;
-    font-family: "Merriweather", serif;
-    color: #FF0000;
-    text-transform: uppercase; }
+    font-family: "Leckerli One", cursive;
+    color: #FF0000; }
     .footer .footer-item .footer-title span {
       color: #ffffff; }
   .footer .footer-item .footer-sosmed {
@@ -4256,7 +4262,7 @@ dl.hiw {
   h1, .panel-pricing .price {
     font-size: 2em; }
 
-  h2, .banner-page .title-page, .banner-page .title-page {
+  h2, .banner-page .title-page {
     font-size: 2em; }
 
   .box-partner .item .box-image {
