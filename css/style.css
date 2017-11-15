@@ -1192,6 +1192,10 @@ table.table {
     .sosmed a .item .fa {
       font-size: 16px; }
 
+.ttitle {
+  font-weight: 400;
+  color: #FF0000; }
+
 /**
  * 3. - COMPONENTS
  * -----------------------------------------------------------------------------
@@ -1958,8 +1962,7 @@ table.table {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
-    border-radius: 0;
-    border-bottom: 6px solid #FF0000; }
+    border-radius: 0; }
 .history-2 .timeline__item .year {
   font-size: 6rem;
   font-weight: 700;
@@ -2001,8 +2004,8 @@ table.table {
   padding: 0 0 50px;
   vertical-align: top; }
   .history-2 .timeline__item .text .title {
-    font-size: 20px;
-    margin: 0 0 16px;
+    font-size: 30px;
+    margin: -10px 0 16px;
     padding: 0;
     font-weight: 700; }
 @media (max-width: 767px) {
@@ -2885,61 +2888,20 @@ table.table {
   .box-event.style-2 .detail-event {
     display: none; }
 
-/*tabmenu*/
-/*  bhoechie tab */
-div.bhoechie-tab-container {
-  z-index: 10;
-  margin-top: 20px; }
+.box-team .media {
+  margin-bottom: 20px; }
+  .box-team .media img {
+    background-color: #eeeeee;
+    padding: 8px;
+    width: 100px;
+    height: 100px; }
+.box-team .body {
+  font-size: small; }
+  .box-team .body strong {
+    font-size: 16px; }
 
-div.bhoechie-tab-menu {
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
-
-div.bhoechie-tab-menu div.list-group {
-  margin-bottom: 0; }
-
-div.bhoechie-tab-menu div.list-group > a {
-  margin-bottom: 0; }
-
-div.bhoechie-tab-menu div.list-group > a .glyphicon,
-div.bhoechie-tab-menu div.list-group > a .fa {
-  color: #5A55A3; }
-
-div.bhoechie-tab-menu div.list-group > a:first-child {
-  border-top-right-radius: 0;
-  -moz-border-top-right-radius: 0; }
-
-div.bhoechie-tab-menu div.list-group > a:last-child {
-  border-bottom-right-radius: 0;
-  -moz-border-bottom-right-radius: 0; }
-
-div.bhoechie-tab-menu div.list-group > a.active,
-div.bhoechie-tab-menu div.list-group > a.active .glyphicon,
-div.bhoechie-tab-menu div.list-group > a.active .fa {
-  background-color: #5A55A3;
-  background-image: #5A55A3;
-  color: #ffffff; }
-
-div.bhoechie-tab-menu div.list-group > a.active:after {
-  content: '';
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  margin-top: -13px;
-  border-left: 0;
-  border-bottom: 13px solid transparent;
-  border-top: 13px solid transparent;
-  border-left: 10px solid #5A55A3; }
-
-div.bhoechie-tab-content {
-  background-color: #ffffff;
-  /* border: 1px solid #eeeeee; */
-  padding-left: 20px;
-  padding-top: 10px; }
-
-div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
-  display: none; }
+.list-team .item {
+  margin-bottom: 40px; }
 
 /**
  * 4. - LOGO & NAVIGATION
