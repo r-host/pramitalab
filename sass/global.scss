@@ -9,6 +9,7 @@ textarea {
 	font-weight: 400;
 	font-size: 15px; 
 	line-height: 1.7;
+    letter-spacing: -.1px;
 }
 
 h1,
@@ -392,7 +393,7 @@ i, cite, em, var, address, dfn {
 	color: $white !important;
 }
 .section-heading{
-	font-size: 30px;
+	font-size: 50px;
 	line-height: 1.2em;
 	color: $color_1;
 	margin-bottom: 40px;
@@ -416,6 +417,9 @@ i, cite, em, var, address, dfn {
 		&:after{
 			margin-left: 0;
 			margin-right: 0;
+		}
+		+ p{
+			text-align: left;
 		}
 	}
 	&.center{
@@ -705,7 +709,7 @@ ul.circle{
 
 .banner-page{
 	display: block;
-	background: $font__body-color url('../images/banner-page-2.jpg') center center no-repeat;
+	/*background: lighten($font__body-color, 40%) url('../images/banner-page-2.jpg') center center no-repeat;*/
 	-webkit-background-size: cover; 
 	-moz-background-size: cover; 
 	-o-background-size: cover; 
@@ -741,7 +745,7 @@ ul.circle{
 	    a{
 	    	color: darken($font__body-color, 10%);
 	    	&:hover{
-	    		color: rgba($white, 1);
+	    		color: $color_1;
 	    	}
 	    }
 	    > li + li:before{
@@ -974,9 +978,31 @@ Back To Top Section
 	    color: $white;
 	    background-color: $color_2;
 	    border-color: #ddd;
+	    position: relative;
+	    &:after{
+	    	content: "\f078";
+		    font: normal normal normal 16px/1 FontAwesome;
+	    	position: absolute;
+	    	right: 10px;
+	    	top: 10px;
+	    	color: $white;
+	    	-webkit-transition: 0.4s all linear;
+			        transition: 0.4s all linear;
+	    }
 	    a{
 	    	display: block;
 	    }
+	}
+	&.active{
+		> .panel-heading{
+			&:after{
+				-moz-transform: rotate(180deg);
+				-webkit-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
 	}
 	.panel-body{
 		.subtitle{
@@ -984,6 +1010,146 @@ Back To Top Section
 			margin: -15px -15px 0 -15px;
 			background-color: $color_1;
 			color: $white;
+		}
+	}
+}
+
+.submenu-page{
+	margin: 0;
+	padding: 0;
+	li{
+		list-style: none;
+		a{
+			color: $color_1;
+			font-size: 24px;
+			text-decoration: none;
+			&:hover{
+				color: $color_2;
+			}
+			.fa{
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+
+input[type=email], 
+input[type=text],
+textarea{
+	&.form-control{
+		height: 44px;
+		&:focus{
+	    	-webkit-box-shadow: 0 0 0 2px $color_3;
+		    -moz-box-shadow: 0 0 0 2px $color_3;
+		    box-shadow: 0 0 0 2px $color_3;
+		    border-color: $color_3;
+		}
+	}
+}
+textarea.form-control{
+	height: auto;
+}
+
+.free-quote{
+	background-color: $color_1;
+	padding: 10px 30px 30px 30px;
+}
+
+.form-contact{
+	/*.btn{
+	    background-color: $color_3;
+    	border-color: $color_3;
+    	color: $black_3;
+    	@include opacity(1);
+    	&:hover{
+    		background-color: darken($color_3, 10%);
+    		border-color: darken($color_3, 10%);
+    	}
+	}*/
+}
+
+.list-alphabet{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	li{
+		list-style: none;
+		display: inline-table;
+		a{
+			width: 70px;
+			height: 70px;
+			background-color: $color_1;
+			color: $white;
+			display: block;
+			text-align: center;
+			font-size: 30px;
+		    display: table-cell;
+			vertical-align: middle;
+			@include border-radius(10px);
+			font-weight: 600;
+			&:hover{
+				background-color: $color_2;
+			}
+			&.active{
+				background-color: $color_2;
+			}
+		}
+	}
+}
+
+.list-tags{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	li{
+		list-style: none;
+		display: inline-table;
+		a{
+			padding: 10px 30px;
+			background-color: $white;
+			border: 1px solid $font__body-color;
+			font-size: 16px;
+			@include border-radius(30px);
+			&:hover{
+				background-color: $color_1;
+				border-color: $color_1;
+				color: $white;
+			}
+		}
+	}
+}
+
+table.table{
+	border: 0;
+	th,
+	td {
+		border: 0;
+	}
+}
+
+.sosmed{
+	margin-top: 20px;
+	margin-bottom: 30px;
+	display: inline-block;
+	a{
+		.item{
+			color: $white;
+			display: table-cell;
+			vertical-align: middle;
+			margin: 0 14px;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			background-color: lighten($color_1, 5%);
+			@include border-radius(50px);
+			&:hover{
+				background-color: $color_2;
+				color: $white;
+			}
+			.fa{
+				font-size: 16px;
+			}
 		}
 	}
 }

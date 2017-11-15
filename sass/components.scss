@@ -152,6 +152,9 @@
     	border-color: transparent;
 	}
 }
+.btn-rounded {
+	@include border-radius(30px);
+}
 .pagination{
 	clear: both;
 	text-align: left;
@@ -574,47 +577,39 @@ transform: translateY(-10px);
 }
 
 .feature-box-9{
-  position: relative;
-  background-color: $white;
-  text-align: left;
-  @extend .media-anim;
+	position: relative;
+	background-color: $white;
+	text-align: left;
+	@extend .media-anim;
 	display: flex;
-  .media{
-    width: 50%;
-    margin-bottom: 0;
-    margin-top: 0;
-    position: relative;
-    background-color: $color_2;
-    &:before{
-    	content: '';
-    	position: absolute;
-    	/*width: 50px;
-    	height: 50px;
-    	background-color: $white;*/
-    	top: 20%;
-    	left: 0;
-    	z-index: 2;
-    	/*-moz-transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(45deg);*/
-		width: 0;
-    height: 0;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 20px solid #FFFFFF;
-    border-right: none;
-    }
-    img{
-    	display: block;
-    }
-  }
-  .body{
-    position: relative;
-    padding: 20px;
-    width: 50%;
-  }
+  	.media{
+		width: 50%;
+		margin-bottom: 0;
+		margin-top: 0;
+		position: relative;
+		background-color: $color_2;
+	    &:before{
+			content: '';
+			position: absolute;
+			top: 20%;
+			left: 0;
+			z-index: 2;
+			width: 0;
+			height: 0;
+			border-top: 25px solid transparent;
+			border-bottom: 25px solid transparent;
+			border-left: 20px solid #FFFFFF;
+			border-right: none;
+	    }
+	    img{
+	    	display: block;
+	    }
+	}
+	.body{
+		position: relative;
+		padding: 20px;
+		width: 50%;
+	}
 	.title{
 		font-size: 18px;
 		margin-bottom: 2px;
@@ -626,12 +621,44 @@ transform: translateY(-10px);
 		font-size: 12px;
 		margin-bottom: 10px;
 	}
-  &:hover{
-  	.media{
-  		background-color: $color_2;
-  	}
-  }
+	&:hover{
+		.media{
+			background-color: $color_2;
+		}
+	}
+	.selengkapnya{
+		padding: 5px 30px;
+		background-color: $color_1;
+		color: $white;
+		@include border-radius(30px);
+		&:hover{
+			background-color: $color_2;
+		}
+	}
+	&.style-2{
+		.media{
+			width: 40%;
+		}
+		.body{
+			width: auto;
+		}
+	}
+}
 
+.list-news-item{
+	.item{
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid rgba($font__body-color, .2);
+		.feature-box-9{
+			.media{
+				width: 45%;
+			}
+			.body{
+				width: auto;
+			}
+		}
+	}
 }
 
 .layanan-list{

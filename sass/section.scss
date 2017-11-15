@@ -38,7 +38,7 @@
 
 
 .banner-page{
-	background-color: rgba($color_2, .9);
+	/*background-color: lighten($font__body-color, 40%);*/
 	> .container{
 		padding-top: 40px; 
 		padding-bottom: 40px; 
@@ -48,7 +48,7 @@
 
 /* 6.1 - About */
 .banner-page.about{
-	background: url('../images/banner-page.jpg') bottom center no-repeat;
+	/*background: url('../images/banner-page.jpg') bottom center no-repeat;*/
 	background-attachment: fixed;
 	background-size: cover;
 }
