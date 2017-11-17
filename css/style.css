@@ -858,7 +858,7 @@ ul.circle {
 .widget-title {
   font-size: 18px;
   font-weight: 700;
-  color: #FF0000;
+  color: #252525;
   margin-bottom: 15px;
   padding-bottom: 15px;
   position: relative; }
@@ -1086,10 +1086,12 @@ Back To Top Section
 
 input[type=email].form-control,
 input[type=text].form-control,
+select.form-control,
 textarea.form-control {
   height: 44px; }
   input[type=email].form-control:focus,
   input[type=text].form-control:focus,
+  select.form-control:focus,
   textarea.form-control:focus {
     -webkit-box-shadow: 0 0 0 2px #000000;
     -moz-box-shadow: 0 0 0 2px #000000;
@@ -1196,6 +1198,18 @@ table.table {
   font-weight: 400;
   color: #FF0000; }
 
+.f-login {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border: 1px solid #d5d5d5;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 0 4px 7px 0 rgba(85, 85, 85, 0.2);
+  box-shadow: 0 4px 7px 0 rgba(85, 85, 85, 0.2); }
+
 /**
  * 3. - COMPONENTS
  * -----------------------------------------------------------------------------
@@ -1276,7 +1290,7 @@ table.table {
 .btn-default {
   background-color: #FF0000;
   color: #ffffff;
-  padding: 15px 20px;
+  padding: 15px 30px;
   border: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -3723,7 +3737,7 @@ dl.hiw {
 
 .maps {
   width: 100%;
-  height: 350px;
+  height: 100%;
   display: block;
   background: #ccc;
   position: relative; }
@@ -4145,6 +4159,59 @@ dl.hiw {
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background-color: #252525; }
+
+.maps-section {
+  margin-top: -180px;
+  position: relative;
+  z-index: 2; }
+
+.cari-cabang {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 40px; }
+  .cari-cabang .form-inline .form-group {
+    width: 40%; }
+    .cari-cabang .form-inline .form-group input[type=text],
+    .cari-cabang .form-inline .form-group select {
+      width: 100%; }
+  .cari-cabang .form-inline .form-group.f-auto {
+    width: auto; }
+
+.kantor-cabang .item {
+  position: relative;
+  padding: 20px 20px; }
+  .kantor-cabang .item .body {
+    padding-right: 160px;
+    display: table-cell; }
+    .kantor-cabang .item .body .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #222222; }
+    .kantor-cabang .item .body .fa {
+      margin-right: 5px;
+      color: #FF0000; }
+    .kantor-cabang .item .body > div {
+      padding: 2px 0; }
+  .kantor-cabang .item .action {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    text-align: right; }
+    .kantor-cabang .item .action a {
+      display: block;
+      color: #FF0000;
+      padding: 5px 0; }
+      .kantor-cabang .item .action a:hover {
+        color: #252525; }
+.kantor-cabang .item:nth-child(odd) {
+  background-color: #eeeeee; }
+.kantor-cabang .item:nth-child(even) {
+  background-color: #ffffff; }
 
 /**
  * 7. - FOOTER

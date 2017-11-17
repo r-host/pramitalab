@@ -229,9 +229,9 @@
 								<li><a href="layanan-dokter-info-pemeriksaan.html">Info Pemeriksaan</a></li>
 							  </ul>
 							</li>
-							<li class="active"><a href="cek-hasil-pemeriksaan.html">Cek Hasil Pemeriksaan</a></li>
+							<li><a href="cek-hasil-pemeriksaan.html">Cek Hasil Pemeriksaan</a></li>
 							<li><a href="fit-meter.html">FIT Meter</a></li>
-							<li class="dropdown">
+							<li class="dropdown active">
 							  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hubungi Kami</a>
 							  <ul class="dropdown-menu">
 								<li><a href="hubungi-kami-inquiry.html">Inquiry</a></li>
@@ -249,14 +249,14 @@
     </div>
  
 	<!-- BANNER -->
-	<div class="section banner-page" style="background:url('images/banner-page-7.jpg') bottom center no-repeat">
+	<div class="section banner-page" style="background:url('images/banner-page-9.jpg') bottom center no-repeat">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
-					<div class="title-page">Cek Hasil Pemeriksaan</div>
+					<div class="title-page">Inquiry</div>
 					<ol class="breadcrumb">
 						<li><a href="index.html">Index</a></li>
-						<li class="active">Cek Hasil Pemeriksaan</li>
+						<li class="active">Inquiry</li>
 					</ol>
 				</div>
 			</div>
@@ -268,48 +268,100 @@
 	<div class="section section-border">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-md-6 col-md-offset-3">
-						<h3 class="text-center">Selamat Datang di Web Portal Laboratorium Klinik PRAMITA</h3>
-					<form class="form-horizontal f-login">
+				<div class="col-sm-3 col-md-3">
+					<div class="widget contact-info-sidebar">
+						<div class="widget-title">
+							Kantor Pusat
+						</div>
+						<ul class="list-info">
+							<li>
+								<div class="info-icon">
+									<span class="fa fa-map-marker"></span>
+								</div>
+								<div class="info-text">99 S.t Jomblo Park Pekanbaru 28292. Indonesia</div> </li>
+							<li>
+								<div class="info-icon">
+									<span class="fa fa-phone"></span>
+								</div>
+								<div class="info-text">(0761) 654-123987</div>
+							</li>
+							<li>
+								<div class="info-icon">
+									<span class="fa fa-envelope"></span>
+								</div>
+								<div class="info-text">info@yoursite.com</div>
+							</li>
+							<li>
+								<div class="info-icon">
+									<span class="fa fa-clock-o"></span>
+								</div>
+								<div class="info-text">Mon - Sat 09:00 - 17:00</div>
+							</li>
+						</ul>
+					</div>
+					<div class="widget contact-sosmed">
+						<div class="widget-title">
+							Information
+						</div>
+						<div class="sosmed">
+							<a href="#" title="">
+								<div class="item">
+									<i class="fa fa-facebook"></i>
+								</div>
+							</a>
+							<a href="#" title="">
+								<div class="item">
+									<i class="fa fa-twitter"></i>
+								</div>
+							</a>
+							<a href="#" title="">
+								<div class="item">
+									<i class="fa fa-instagram"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-9 col-md-9">
+					<h3>Inquiry Form</h3>
+					<form class="f-login">
 					  <div class="form-group">
-					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-					    <div class="col-sm-10">
-					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-					    </div>
+					    <label for="p_nama">Nama</label>
+					    <input type="text" class="form-control" id="p_nama" placeholder="">
 					  </div>
 					  <div class="form-group">
-					    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-					    </div>
+					    <label for="p_email">Email address</label>
+					    <input type="email" class="form-control" id="p_email" placeholder="">
 					  </div>
 					  <div class="form-group">
-					    <div class="col-sm-offset-2 col-sm-10">
-					      <div class="checkbox">
-					        <label>
-					          <input type="checkbox"> Remember me
-					        </label>
-					      </div>
-					    </div>
-					  </div>
+	                       <label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Laki-laki
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Perempuan
+							</label>
+                      </div>
+                      <div class="form-group">
+                      		<label for="p_layanan">Pilih layanan</label>
+                            <select class="form-control" id="p_layanan">
+							  	<option value="">-- Pilih Layanan --</option>
+	                            <option value="1">CUSTOMER SERVICE</option>
+	                            <option value="2">KONSULTASI</option>
+	                            <option value="3">KRITIK/SARAN</option>
+	                            <option value="4">PERMINTAAN KERJASAMA</option>
+							</select>
+                      </div>
 					  <div class="form-group">
-					    <div class="col-sm-offset-2 col-sm-10">
-					      <button type="reset" class="btn btn-default btn-rounded">Reset</button>
-					      <button type="submit" class="btn btn-default btn-rounded">Login</button>
-					    </div>
+					  	<label for="p_pesan">Pesan</label>
+						 <textarea id="p_pesan" class="form-control" rows="6" placeholder=""></textarea>
+						</div>
+					  <div class="form-group">
+					    <button type="reset" class="btn btn-default btn-rounded">Reset</button>
+					      <button type="submit" class="btn btn-default btn-rounded">Kirim</button>
 					  </div>
 					</form>	
 
-					<p>Melalui portal ini Anda bisa login untuk melihat dan mencetak hasil pemeriksaan sesuai status Anda sebagai pelanggan Laboratorium Klinik PRAMITA. </p>
-					<p>Melalui portal ini Anda bisa login untuk melihat dan mencetak hasil pemeriksaan sesuai status Anda sebagai pelanggan Laboratorium Klinik PRAMITA. </p>
-					<p>Setelah Anda berhasil Login :</p>
-					<ol>
-						<li>Apabila Anda seorang pelanggan pribadi, anda bisa melihat/mencetak hasil pemeriksaan laboratorium yang telah Anda jalani di Laboratorium Klinik PRAMITA.</li>
-						<li>Apabila Anda seorang Dokter, Anda bisa melihat/mencetak hasil pemeriksaan semua pasien yang Anda referensikan dan telah menjalani pemeriksaan di Laboratorium Klinik PRAMITA.</li>
-						<li>Apabila Anda seorang PIC HRD Manajemen di suatu Perusahaan Pelanggan kami, anda bisa melihat/mencetak hasil pemeriksaan laboratorium pegawai Perusahaan Anda.</li>
-					</ol>
-					<p>Selamat menikmati layanan Web Portal Laboratorium Klinik PRAMITA.
-Kapanpun dan dimanapun Anda berada, kami selalu dekat dengan Anda.</p>
+					
 				</div>
 			</div>
 		</div>
