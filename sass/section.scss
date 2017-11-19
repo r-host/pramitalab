@@ -907,7 +907,7 @@ dl.hiw{
     z-index: 2;
 }
 .cari-cabang{
-	background-color: rgba($white, .9);
+	background-color: rgba($white, 1);
 	padding: 20px;
 	@include border-radius(10px);
 	text-align: center;
@@ -930,7 +930,7 @@ dl.hiw{
 	.item{
 		position: relative;
 		padding: 20px 20px;
-		
+		border: 1px solid lighten($font__body-color, 60%);
 		.body{
 			padding-right: 160px;
 			    display: table-cell;

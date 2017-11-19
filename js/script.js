@@ -224,6 +224,33 @@ $(document).ready(function(){
 	/* =================================
 	MAGNIFIC POPUP
 	=================================== */
+	$('#filterOptions li a').click(function() {
+	    // fetch the class of the clicked item
+	    var ourClass = $(this).attr('data-filter');
+	    
+	    var cabang = ourClass.toUpperCase();
+	    $('#kantor-cabang span').text(cabang);
+	    // reset the active class on all the buttons
+	    $('#filterOptions li').removeClass('active');
+	    // update the active state on our clicked button
+	    $(this).parent().addClass('active');
+
+	    if(ourClass == 'all') {
+	      // show all our items
+	      $('#ourHolder').children('div.item').show();
+	    }
+	    else {
+	      // hide all elements that don't share ourClass
+	      $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+	      // show all elements that do share ourClass
+	      $('#ourHolder').children('div.' + ourClass).show();
+	    }
+	    return false;
+  	});
+
+	/* =================================
+	MAGNIFIC POPUP
+	=================================== */
 	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       disableOn: 700,
       type: 'iframe',

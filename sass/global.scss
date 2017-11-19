@@ -1112,7 +1112,15 @@ textarea.form-control{
 			border: 1px solid $font__body-color;
 			font-size: 16px;
 			@include border-radius(30px);
+			text-decoration: none;
 			&:hover{
+				background-color: $color_1;
+				border-color: $color_1;
+				color: $white;
+			}
+		}
+		&.active{
+			a{
 				background-color: $color_1;
 				border-color: $color_1;
 				color: $white;

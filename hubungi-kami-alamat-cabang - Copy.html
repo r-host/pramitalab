@@ -496,7 +496,6 @@
 		</div>
 		
 	</div>
-
 	
 	<!-- JS VENDOR -->
 	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
@@ -513,99 +512,116 @@
 	<script type="text/javascript" src="js/vendor/validator.min.js"></script>
 	<script type="text/javascript" src="js/vendor/form-scripts.js"></script>
 	
+	<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAeg3ygnpr8maRa_-dbrudkIwHkzQW_NKQ&callback=initMap'></script>
 
 	<script type="text/javascript" src="js/script.js"></script>
 
+
 	<script>
+	var uluru = { lat: -6.188680, lng: 106.845826 };
+	var start = 1;
 
-	var map;
-  	var markers = [];
-  	var contentString;
+	var myLat = -6.188680,
+	myLng = 106.845826,
+	myMarkerx = 'images/cd-icon-location.png';
+	
+	
 
-	function initMap() {
-	    var uluru = { lat: -6.188680, lng: 106.845826 };
-	    var myMarkerx = 'images/cd-icon-location.png';
-	    var map_zoom = 5;
+	var latitude = myLat,
+		longitude = myLng,
+		markerx = myMarkerx,
+		map_zoom = 16;
 
-	    map = new google.maps.Map(document.getElementById('maps'), {
-			zoom: map_zoom,
-			panControl: false,
-			zoomControl: false,
-			mapTypeControl: false,
-			streetViewControl: false,
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			scrollwheel: false,
-			center: uluru
-	    });
-
-	    var marker = new google.maps.Marker({
-	      position: uluru,
-	      map: map,
-	      visible: true,
-	      // icon: myMarkerx
-	    });
-	    marker.setMap(null);
-
-	  var infowindow = new google.maps.InfoWindow({
-	    content: contentString
-	  });
-
-
-	  marker.addListener('click', function() {
-	    infowindow.open(map, marker);
-	  });
-
-	  // rud
-
-	  	function changeMarkerPosition(marker, lokasi) {
-		 	var latlon_array = lokasi.split(','); 
-	  		var lat = latlon_array[0]; 
-			var lon = latlon_array[1]; 
-
-
-		    var latlng = new google.maps.LatLng(lat, lon);
-		    marker.setPosition(latlng);
-		    marker.setIcon(myMarkerx);
-		    map.setCenter(new google.maps.LatLng(lat, lon));
-
-		}
-
-	  	$btn = $('.lihat-peta');
-		$btn.on('click', function(e){
-			
-			// e.preventDefault();
-			lokasi = $(this).attr('data-location');
-			changeMarkerPosition(marker, lokasi);
-			console.log($(this).parent().parent().find('.alamat').text());
-			console.log($(this).parent().parent().find('.telpon').text());
-			alamat = $(this).parent().parent().find('.alamat').text();
-			telpon = $(this).parent().parent().find('.telpon').text();
-
-
-			contentString = '<div id="content">'+
-	        '<div id="siteNotice">'+
-	        '</div>'+
-	        '<h4 id="firstHeading" class="firstHeading">' + alamat + '</h4>'+
-	        '<div id="bodyContent">'+
-	        '<p>Telpon: ' + telpon + '</p>'+
-	        '</div>'+
-	        '</div>';
-			
-			
-	        infowindow.close();
-	        map.setZoom(16);
-	        marker.setMap(map);
-	        infowindow.setContent(contentString);
-	     	infowindow.open(map, marker);
-
-		});
-
-
+		//set google map options
+	var map_options = {
+		center: new google.maps.LatLng(latitude, longitude),
+		zoom: map_zoom,
+		panControl: false,
+		zoomControl: false,
+		mapTypeControl: false,
+		streetViewControl: false,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		scrollwheel: false
 	}
+	//inizialize the map
+	var map = new google.maps.Map(document.getElementById('maps'), map_options);
+	//add a custom marker to the map
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(latitude, longitude),
+		map: map,
+		visible: true,
+		icon: myMarkerx,
+	});
+
+	marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+	 function changeMarkerPosition(marker, lokasi) {
+	 	var latlon_array = lokasi.split(','); 
+  		var lat = latlon_array[0]; 
+		var lon = latlon_array[1]; 
+
+
+	    var latlng = new google.maps.LatLng(lat, lon);
+	    marker.setPosition(latlng);
+	    map.setCenter(new google.maps.LatLng(lat, lon));
+
+
+
+
+
+	   
+	}
+	var infowindow;
+
+	var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h4 id="firstHeading" class="firstHeading">' + alamat + '</h4>'+
+        '<div id="bodyContent">'+
+        '<p>Telpon: ' + telpon + '</p>'+
+        '</div>'+
+        '</div>';
+
+    infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+	var alamat;
+	$btn = $('.lihat-peta');
+	$btn.on('click', function(e){
+		
+		// e.preventDefault();
+		lokasi = $(this).attr('data-location');
+		changeMarkerPosition(marker, lokasi);
+		console.log($(this).parent().parent().find('.alamat').text());
+		console.log($(this).parent().parent().find('.telpon').text());
+		alamat = $(this).parent().parent().find('.alamat').text();
+		telpon = $(this).parent().parent().find('.telpon').text();
+
+
+		contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h4 id="firstHeading" class="firstHeading">' + alamat + '</h4>'+
+        '<div id="bodyContent">'+
+        '<p>Telpon: ' + telpon + '</p>'+
+        '</div>'+
+        '</div>';
+		
+		
+        // infowindow.close();
+        infowindow.setContent(contentString);
+     	infowindow.open(map, marker);
+
+	});
+
+	
+
 
 	</script>
-	<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAeg3ygnpr8maRa_-dbrudkIwHkzQW_NKQ&callback=initMap'></script>
-	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU&callback=initMap"> </script> rud-->
 		
 </body>
 </html>
