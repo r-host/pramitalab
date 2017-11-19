@@ -222,13 +222,16 @@ $(document).ready(function(){
   	}); 
 	
 	/* =================================
-	MAGNIFIC POPUP
+	FILTER KANTOR CABANG
 	=================================== */
+	function capitaliseFirstLetter(string){
+	  return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 	$('#filterOptions li a').click(function() {
 	    // fetch the class of the clicked item
 	    var ourClass = $(this).attr('data-filter');
-	    
-	    var cabang = ourClass.toUpperCase();
+	    //capitaliseFirstLetter(ourClass.text());
+	    var cabang = ourClass.charAt(0).toUpperCase() + ourClass.slice(1);
 	    $('#kantor-cabang span').text(cabang);
 	    // reset the active class on all the buttons
 	    $('#filterOptions li').removeClass('active');

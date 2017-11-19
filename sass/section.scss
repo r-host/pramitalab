@@ -939,6 +939,9 @@ dl.hiw{
 				font-weight: 600;
 				color: darken($font__body-color, 20%);
 			}
+			.media{
+				display: none;
+			}
 			.fa{
 				margin-right: 5px;
 				color: $color_1;
@@ -961,11 +964,14 @@ dl.hiw{
 				}
 			}
 		}
+		&:hover{
+			background-color: lighten($font__body-color, 60%);
+		}
 	}
-	.item:nth-child(odd){
+	/*.item:nth-child(odd){
 		background-color: lighten($font__body-color, 60%);
 	}
 	.item:nth-child(even){
 		background-color: $white;
-	}
+	}*/
 }

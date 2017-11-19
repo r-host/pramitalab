@@ -1177,3 +1177,13 @@ table.table{
 	-webkit-box-shadow: 0 4px 7px 0 rgba($font__body-color, .2);
   	box-shadow: 0 4px 7px 0 rgba($font__body-color, .2);
 }
+
+.infomap{
+	.body{
+		padding: 0 20px;
+		h5{
+			color: $color_1;
+			margin-bottom: 0;
+		}
+	}
+}

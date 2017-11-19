@@ -1215,6 +1215,12 @@ table.table {
   -webkit-box-shadow: 0 4px 7px 0 rgba(85, 85, 85, 0.2);
   box-shadow: 0 4px 7px 0 rgba(85, 85, 85, 0.2); }
 
+.infomap .body {
+  padding: 0 20px; }
+  .infomap .body h5, .infomap .body .section-subheading {
+    color: #FF0000;
+    margin-bottom: 0; }
+
 /**
  * 3. - COMPONENTS
  * -----------------------------------------------------------------------------
@@ -4187,37 +4193,44 @@ dl.hiw {
   .cari-cabang .form-inline .form-group.f-auto {
     width: auto; }
 
-.kantor-cabang .item {
-  position: relative;
-  padding: 20px 20px;
-  border: 1px solid #eeeeee; }
-  .kantor-cabang .item .body {
-    padding-right: 160px;
-    display: table-cell; }
-    .kantor-cabang .item .body .title {
-      font-size: 20px;
-      font-weight: 600;
-      color: #222222; }
-    .kantor-cabang .item .body .fa {
-      margin-right: 5px;
-      color: #FF0000; }
-    .kantor-cabang .item .body > div {
-      padding: 2px 0; }
-  .kantor-cabang .item .action {
-    position: absolute;
-    right: 20px;
-    top: 30px;
-    text-align: right; }
-    .kantor-cabang .item .action a {
-      display: block;
-      color: #FF0000;
-      padding: 5px 0; }
-      .kantor-cabang .item .action a:hover {
-        color: #252525; }
-.kantor-cabang .item:nth-child(odd) {
-  background-color: #eeeeee; }
-.kantor-cabang .item:nth-child(even) {
-  background-color: #ffffff; }
+.kantor-cabang {
+  /*.item:nth-child(odd){
+  	background-color: lighten($font__body-color, 60%);
+  }
+  .item:nth-child(even){
+  	background-color: $white;
+  }*/ }
+  .kantor-cabang .item {
+    position: relative;
+    padding: 20px 20px;
+    border: 1px solid #eeeeee; }
+    .kantor-cabang .item .body {
+      padding-right: 160px;
+      display: table-cell; }
+      .kantor-cabang .item .body .title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #222222; }
+      .kantor-cabang .item .body .media {
+        display: none; }
+      .kantor-cabang .item .body .fa {
+        margin-right: 5px;
+        color: #FF0000; }
+      .kantor-cabang .item .body > div {
+        padding: 2px 0; }
+    .kantor-cabang .item .action {
+      position: absolute;
+      right: 20px;
+      top: 30px;
+      text-align: right; }
+      .kantor-cabang .item .action a {
+        display: block;
+        color: #FF0000;
+        padding: 5px 0; }
+        .kantor-cabang .item .action a:hover {
+          color: #252525; }
+    .kantor-cabang .item:hover {
+      background-color: #eeeeee; }
 
 /**
  * 7. - FOOTER
