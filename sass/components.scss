@@ -480,6 +480,7 @@ transform: translateY(-10px);
 .feature-box-8{
   position: relative;
   padding-bottom: 20px;
+  margin-bottom: 40px;
   background-color: $color_1;
   text-align: center;
   -webkit-box-shadow: 0 4px 10px 0 rgba($font__body-color, .1);
@@ -644,6 +645,15 @@ transform: translateY(-10px);
 		.body{
 			width: auto;
 		}
+	}
+}
+
+@media (max-width: 767px){
+	.feature-box-9{
+		display: block;
+	    .body, .media{
+	    	width: 100%;
+	    }
 	}
 }
 

@@ -1079,10 +1079,20 @@ Back To Top Section
       color: #FF0000;
       font-size: 24px;
       text-decoration: none; }
+      .submenu-page li a .fa {
+        margin-right: 10px;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0); }
       .submenu-page li a:hover {
         color: #252525; }
-      .submenu-page li a .fa {
-        margin-right: 10px; }
+        .submenu-page li a:hover .fa {
+          -webkit-transform: translate3d(5px, 0, 0);
+          transform: translate3d(5px, 0, 0); }
 
 input[type=email].form-control,
 input[type=text].form-control,
@@ -1093,10 +1103,10 @@ textarea.form-control {
   input[type=text].form-control:focus,
   select.form-control:focus,
   textarea.form-control:focus {
-    -webkit-box-shadow: 0 0 0 2px #000000;
-    -moz-box-shadow: 0 0 0 2px #000000;
-    box-shadow: 0 0 0 2px #000000;
-    border-color: #000000; }
+    -webkit-box-shadow: 0 0 0 1px #252525;
+    -moz-box-shadow: 0 0 0 1px #252525;
+    box-shadow: 0 0 0 1px #252525;
+    border-color: #252525; }
 
 textarea.form-control {
   height: auto; }
@@ -1647,6 +1657,7 @@ table.table {
 .feature-box-8 {
   position: relative;
   padding-bottom: 20px;
+  margin-bottom: 40px;
   background-color: #FF0000;
   text-align: center;
   -webkit-box-shadow: 0 4px 10px 0 rgba(85, 85, 85, 0.1);
@@ -1778,6 +1789,11 @@ table.table {
   .feature-box-9.style-2 .body {
     width: auto; }
 
+@media (max-width: 767px) {
+  .feature-box-9 {
+    display: block; }
+    .feature-box-9 .body, .feature-box-9 .media {
+      width: 100%; } }
 .list-news-item .item {
   margin-bottom: 40px;
   padding-bottom: 40px;
@@ -3005,9 +3021,9 @@ table.table {
           .topbar .topbar-right .topbar-menu li a:hover {
             color: #252525; }
   .topbar .topbar-sosmed a {
-    color: rgba(85, 85, 85, 0.4);
+    color: #a2a2a2;
     font-size: 12px;
-    padding: 0 10px; }
+    padding: 0 5px; }
     .topbar .topbar-sosmed a:hover {
       color: #FF0000; }
 
@@ -3036,6 +3052,12 @@ table.table {
     border-radius: 30px; }
     .topbar-info .btn .fa, .topbar-info .btn-primary .fa, .topbar-info .btn-secondary .fa, .topbar-info .btn-ghost-light .fa, .topbar-info .btn-ghost-dark .fa {
       margin-right: 10px; }
+
+.social-proof {
+  display: inline-table;
+  margin-right: 20px; }
+  .social-proof img {
+    padding: 0 5px; }
 
 .contact-info {
   float: right;
@@ -3748,7 +3770,8 @@ dl.hiw {
 
 .maps {
   width: 100%;
-  height: 100%;
+  /*height:100%;*/
+  height: calc(100% - 180px);
   display: block;
   background: #ccc;
   position: relative; }
@@ -4177,8 +4200,8 @@ dl.hiw {
   z-index: 2; }
 
 .cari-cabang {
-  background-color: white;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 20px 5px 20px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -4364,15 +4387,29 @@ dl.hiw {
   margin: 0;
   padding: 0; }
   .list-info li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     list-style: none;
     font-size: 16px; }
     .list-info li .info-icon {
-      display: inline-block;
-      color: #041e42;
-      float: left; }
+      text-align: center;
+      color: #ffffff;
+      float: left;
+      width: 40px;
+      height: 40px;
+      background-color: #FF0000;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      border-radius: 50px;
+      padding-top: 6px; }
+      .list-info li .info-icon:hover {
+        background-color: #252525;
+        color: #ffffff; }
+      .list-info li .info-icon .fa {
+        font-size: 20px; }
     .list-info li .info-text {
-      margin-left: 30px; }
+      margin-left: 55px;
+      padding-top: 5px; }
 
 .pline {
   font-size: 16px;

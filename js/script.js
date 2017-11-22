@@ -227,29 +227,44 @@ $(document).ready(function(){
 	function capitaliseFirstLetter(string){
 	  return string.charAt(0).toUpperCase() + string.slice(1);
 	}
-	$('#filterOptions li a').click(function() {
-	    // fetch the class of the clicked item
-	    var ourClass = $(this).attr('data-filter');
-	    //capitaliseFirstLetter(ourClass.text());
-	    var cabang = ourClass.charAt(0).toUpperCase() + ourClass.slice(1);
-	    $('#kantor-cabang span').text(cabang);
-	    // reset the active class on all the buttons
-	    $('#filterOptions li').removeClass('active');
-	    // update the active state on our clicked button
-	    $(this).parent().addClass('active');
+	$('#select-kota').on('change', function() {
+	  console.log( this.value );
+	  	var ourClass = this.value.toLowerCase();
+		if(ourClass == 'all') {
+		  // show all our items
+		  $('#ourHolder').children('div.item').show();
+		}
+		else {
+		  // hide all elements that don't share ourClass
+		  $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+		  // show all elements that do share ourClass
+		  $('#ourHolder').children('div.' + ourClass).show();
+		}
+		return false;
+	})
+	// $('#filterOptions li a').click(function() {
+	//     // fetch the class of the clicked item
+	//     var ourClass = $(this).attr('data-filter');
+	//     //capitaliseFirstLetter(ourClass.text());
+	//     var cabang = ourClass.charAt(0).toUpperCase() + ourClass.slice(1);
+	//     $('#kantor-cabang span').text(cabang);
+	//     // reset the active class on all the buttons
+	//     $('#filterOptions li').removeClass('active');
+	//     // update the active state on our clicked button
+	//     $(this).parent().addClass('active');
 
-	    if(ourClass == 'all') {
-	      // show all our items
-	      $('#ourHolder').children('div.item').show();
-	    }
-	    else {
-	      // hide all elements that don't share ourClass
-	      $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
-	      // show all elements that do share ourClass
-	      $('#ourHolder').children('div.' + ourClass).show();
-	    }
-	    return false;
-  	});
+	//     if(ourClass == 'all') {
+	//       // show all our items
+	//       $('#ourHolder').children('div.item').show();
+	//     }
+	//     else {
+	//       // hide all elements that don't share ourClass
+	//       $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+	//       // show all elements that do share ourClass
+	//       $('#ourHolder').children('div.' + ourClass).show();
+	//     }
+	//     return false;
+ //  	});
 
 	/* =================================
 	MAGNIFIC POPUP

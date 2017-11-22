@@ -38,9 +38,9 @@
 	}
   .topbar-sosmed{
     a{
-      color: rgba($font__body-color, .4);
+      color: lighten($font__body-color, 30%);
       font-size: 12px;
-      padding: 0 10px;
+      padding: 0 5px;
       &:hover{
         color: $color_1;
       }
@@ -79,6 +79,13 @@
     .fa{
       margin-right: 10px;
     }
+  }
+}
+.social-proof{
+  display: inline-table;
+  margin-right: 20px;
+  img{
+    padding: 0 5px;
   }
 }
 

@@ -1023,11 +1023,18 @@ Back To Top Section
 			color: $color_1;
 			font-size: 24px;
 			text-decoration: none;
-			&:hover{
-				color: $color_2;
-			}
 			.fa{
 				margin-right: 10px;
+				@include transisi(0.2s);
+				-webkit-transform: translate3d(0, 0, 0);
+						transform: translate3d(0, 0, 0);
+			}
+			&:hover{
+				color: $color_2;
+				.fa{
+					-webkit-transform: translate3d(5px, 0, 0);
+						transform: translate3d(5px, 0, 0);
+				}
 			}
 		}
 	}
@@ -1041,10 +1048,10 @@ textarea{
 	&.form-control{
 		height: 44px;
 		&:focus{
-	    	-webkit-box-shadow: 0 0 0 2px $color_3;
-		    -moz-box-shadow: 0 0 0 2px $color_3;
-		    box-shadow: 0 0 0 2px $color_3;
-		    border-color: $color_3;
+	    	-webkit-box-shadow: 0 0 0 1px $color_2;
+		    -moz-box-shadow: 0 0 0 1px $color_2;
+		    box-shadow: 0 0 0 1px $color_2;
+		    border-color: $color_2;
 		}
 	}
 }
