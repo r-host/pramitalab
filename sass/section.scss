@@ -908,9 +908,9 @@ dl.hiw{
     z-index: 2;
 }
 .cari-cabang{
-	background-color: rgba($white, .9);
+	background-color: lighten($font__body-color, 60%);
 	padding: 20px 20px 5px 20px;
-	@include border-radius(10px);
+	/*@include border-radius(10px);*/
 	text-align: center;
 	margin-bottom: 40px;
 	.form-inline .form-group{
