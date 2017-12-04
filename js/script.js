@@ -227,21 +227,27 @@ $(document).ready(function(){
 	function capitaliseFirstLetter(string){
 	  return string.charAt(0).toUpperCase() + string.slice(1);
 	}
-	$('#select-kota').on('change', function() {
-	  console.log( this.value );
-	  	var ourClass = this.value.toLowerCase();
-		if(ourClass == 'all') {
+	var $holder = $('#ourHolder');
+	function filterKota(ourClass) {
+	 	if(ourClass == 'all') {
 		  // show all our items
-		  $('#ourHolder').children('div.item').show();
+		  $holder.children('div.item').show();
 		}
 		else {
 		  // hide all elements that don't share ourClass
-		  $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+		  $holder.children('div:not(.' + ourClass + ')').hide();
 		  // show all elements that do share ourClass
-		  $('#ourHolder').children('div.' + ourClass).show();
+		  $holder.children('div.' + ourClass).show();
 		}
+
+	}
+	filterKota('surabaya');
+	$('#select-kota').on('change', function() {
+	  console.log( this.value );
+	  	var ourClass = this.value.toLowerCase();
+		filterKota(ourClass);
 		return false;
-	})
+	});
 	// $('#filterOptions li a').click(function() {
 	//     // fetch the class of the clicked item
 	//     var ourClass = $(this).attr('data-filter');
