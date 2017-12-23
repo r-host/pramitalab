@@ -1183,6 +1183,20 @@ table.table{
 	margin-bottom: 40px;
 	-webkit-box-shadow: 0 4px 7px 0 rgba($font__body-color, .2);
   	box-shadow: 0 4px 7px 0 rgba($font__body-color, .2);
+
+	.row
+	{
+	  margin-right: 0px;
+	  margin-left: 0px;
+	}
+	.row > [class^="col-"],
+	.row > [class*=" col-"],
+	.row[class*='col-'],
+	.row[class*=" col-"]
+	{
+		padding-right:5px;
+		padding-left:5px;
+	}
 }
 
 .infomap{

@@ -190,6 +190,7 @@
     border: 0;
     border-radius: 0;
     > li{
+      position: relative;
     	//text-transform: uppercase;
     	/*border-bottom: 1px solid lighten($color_1, 10%);*/
     	a{

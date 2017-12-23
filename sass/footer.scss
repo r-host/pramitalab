@@ -75,7 +75,8 @@
 			> .item{
 				clear: both;
 				border-bottom: 1px solid rgba(#ccc, .2);
-				padding: 10px 0;
+				padding: 5px 0;
+				margin-bottom: 10px;
 				@include clearfix;
 				
 				.col{
@@ -83,6 +84,11 @@
 					float: left;
 				}
 			}
+			strong{
+				padding: 0 0 10px 0;
+				display: block;
+			}
+			
 		}
 
 	  	.recent-post{

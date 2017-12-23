@@ -1224,6 +1224,15 @@ table.table {
   margin-bottom: 40px;
   -webkit-box-shadow: 0 4px 7px 0 rgba(85, 85, 85, 0.2);
   box-shadow: 0 4px 7px 0 rgba(85, 85, 85, 0.2); }
+  .f-login .row {
+    margin-right: 0px;
+    margin-left: 0px; }
+  .f-login .row > [class^="col-"],
+  .f-login .row > [class*=" col-"],
+  .f-login .row[class*='col-'],
+  .f-login .row[class*=" col-"] {
+    padding-right: 5px;
+    padding-left: 5px; }
 
 .infomap .body {
   padding: 0 20px; }
@@ -3137,6 +3146,7 @@ table.table {
     border: 0;
     border-radius: 0; }
     .navbar-main .dropdown-menu > li {
+      position: relative;
       /*border-bottom: 1px solid lighten($color_1, 10%);*/ }
       .navbar-main .dropdown-menu > li a {
         padding: 10px 20px;
@@ -4316,7 +4326,8 @@ dl.hiw {
   .footer .footer-item .jam-operasional > .item {
     clear: both;
     border-bottom: 1px solid rgba(204, 204, 204, 0.2);
-    padding: 10px 0; }
+    padding: 5px 0;
+    margin-bottom: 10px; }
     .footer .footer-item .jam-operasional > .item::after {
       display: block;
       content: "";
@@ -4324,6 +4335,9 @@ dl.hiw {
     .footer .footer-item .jam-operasional > .item .col {
       width: 50%;
       float: left; }
+  .footer .footer-item .jam-operasional strong {
+    padding: 0 0 10px 0;
+    display: block; }
   .footer .footer-item .recent-post {
     margin: 0;
     padding: 0; }
